@@ -25,6 +25,7 @@ body {
 }
 
 /* Footer */
+
 .f-info-links a {
   text-decoration: none;
   color: #222;
@@ -54,6 +55,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-top: 8rem;
 }
 
 /* Cards */
@@ -81,7 +83,6 @@ body {
   text-decoration: none;
 }
 
-
 /* Card Effect or Overly Effect */
 .card-img-overlay {
   opacity: 0;
@@ -96,4 +97,29 @@ body {
 .add-btn {
   background-color: #fe424d;
   border: none;
+}
+
+/* Edit page */
+.edit-btn {
+  background-color: #fe424d;
+  border: none;
+}
+
+/* Show Page */
+.show-img {
+  height: 30vh;
+}
+
+.btns {
+  display: flex;
+}
+
+.btn {
+  background-color: #fe424d;
+  border: none;
+}
+
+.show-card {
+  /* padding-left: 0; */
+  padding-right: 0;
 }

@@ -12,10 +12,10 @@ const listingSchema = new Schema({
   image: {
     type: String,
     default:
-      "https://unsplash.com/photos/sunbed-and-parasol-on-empty-sandy-beach-during-low-season-or-early-in-the-morning-sea-and-ocean-paradise-and-vacation-concept-olsYQkcRd5w",
+      "https://plus.unsplash.com/premium_photo-1661964304872-7b715cf38cd1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     set: (v) =>
       v === ""
-        ? "https://unsplash.com/photos/sunbed-and-parasol-on-empty-sandy-beach-during-low-season-or-early-in-the-morning-sea-and-ocean-paradise-and-vacation-concept-olsYQkcRd5w"
+        ? "https://plus.unsplash.com/premium_photo-1661964304872-7b715cf38cd1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         : v,
   },
   price: {
