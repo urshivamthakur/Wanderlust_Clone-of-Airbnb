@@ -55,12 +55,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
+  margin-top: 2.5rem;
 }
 
 /* Cards */
 
-.card {
+.listing-card {
   border: none;
   margin-bottom: 2rem;
 }
