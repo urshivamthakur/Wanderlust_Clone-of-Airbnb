@@ -62,7 +62,7 @@ body {
 
 .listing-card {
   border: none;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 .card-img-top {
@@ -122,4 +122,8 @@ body {
 .show-card {
   /* padding-left: 0; */
   padding-right: 0;
+}
+
+.text-align {
+  text-align: justify;
 }
