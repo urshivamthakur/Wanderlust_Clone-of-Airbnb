@@ -62,7 +62,11 @@ body {
 
 .listing-card {
   border: none;
-  /* margin-bottom: 2rem; */
+  margin-bottom: 2rem;
+}
+
+.delete-border {
+  border: none;
 }
 
 .card-img-top {
