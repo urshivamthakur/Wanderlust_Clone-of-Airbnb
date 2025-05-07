@@ -131,3 +131,9 @@ body {
 .text-align {
   text-align: justify;
 }
+
+.img {
+  max-width: 15rem;
+  height: auto;
+  border: 1px solid #dee2e6;
+}
