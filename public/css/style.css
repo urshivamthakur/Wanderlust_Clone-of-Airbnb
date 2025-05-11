@@ -132,8 +132,20 @@ body {
   text-align: justify;
 }
 
+/* Edit Image */
 .img {
   max-width: 15rem;
   height: auto;
   border: 1px solid #dee2e6;
+}
+
+/* Map Styling */
+#map {
+  height: 22rem;
+  width: auto;
+}
+
+#Marker {
+  font-size: 1.5rem;
+  color: #de0a26;
 }
