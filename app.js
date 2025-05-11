@@ -52,11 +52,9 @@ const sessionOptions = {
 };
 
 // **** Home Route ****
-app.get("/", (req, res) => {
-  res.send(
-    'working... <br><a href="http://localhost:8080/listings">Go to Listings</a>'
-  );
-});
+// app.get("/", (req, res) => {
+//   res.send("Hi, I am root");
+// });
 
 app.use(session(sessionOptions));
 app.use(flash());
