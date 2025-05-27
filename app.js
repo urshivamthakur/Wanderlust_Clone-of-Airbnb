@@ -16,6 +16,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
+const homeRouter = require("./routes/home.js");
 const listingsRouter = require("./routes/listing.js");
 const reviewsRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
@@ -50,7 +51,7 @@ const store = MongoStore.create({
   touchAfter: 24 * 60 * 3600,
 });
 
-store.on("erro", () => {
+store.on("error", (err) => {
   console.log("ERROR in MONGO SESSION STORE", err);
 });
 
@@ -60,16 +61,11 @@ const sessionOptions = {
   resave: false,
   saveUninitialized: true,
   cookie: {
-    expires: Date.now() * 7 * 24 * 60 * 60 * 1000,
+    expires: Date.now() + (7 * 24 * 60 * 60 * 1000),
     maxAge: 7 * 24 * 60 * 60 * 1000,
     httpOnly: true,
   },
 };
-
-// **** Home Route ****
-// app.get("/", (req, res) => {
-//   res.send("Hi, I am root");
-// });
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -95,7 +91,10 @@ app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 
 //****** User_Router *****
-app.use("/", userRouter);
+app.use("/user", userRouter);
+
+// ***** Home_Router *****
+app.use("/", homeRouter);
 
 app.all("*", (req, res, next) => {
   next(new ExpressError(404, "Page not found"));
@@ -108,5 +107,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(8080, () => {
-  console.log("server is listning to port 8080");
+  console.log("server is listening to port 8080");
 });

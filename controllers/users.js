@@ -4,21 +4,21 @@ module.exports.renderSignupForm = (req, res) => {
   res.render("users/signup.ejs");
 };
 
-module.exports.signUp = async (req, res) => {
+module.exports.signUp = async (req, res, next) => {
   try {
     let { username, email, password } = req.body;
     const newUser = new User({ email, username });
     const registerdUser = await User.register(newUser, password);
     req.login(registerdUser, (err) => {
       if (err) {
-        return next();
+        return next(err);
       }
       req.flash("success", "Welcome to Wanderlust!");
       res.redirect("/listings");
     });
   } catch (e) {
     req.flash("error", e.message);
-    res.redirect("/signup");
+    res.redirect("/user/signup");
   }
 };
 
@@ -37,7 +37,7 @@ module.exports.logout = (req, res, next) => {
     if (err) {
       return next(err);
     }
-    req.flash("success", "You are logout!");
+    req.flash("success", "You are logged out!");
     res.redirect("/listings");
   });
 };
