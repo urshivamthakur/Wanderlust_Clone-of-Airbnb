@@ -192,6 +192,35 @@ body {
   border: 1px solid #dee2e6;
 }
 
+.idx-img-height {
+  height: 20rem;
+}
+
+@media (max-width: 767.2px) {
+  .idx-img-height {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .idx-img-height {
+    height: 10rem;
+  }
+
+  .tax-toggle {
+    max-width: 50%;
+    font-size: 12px;
+  }
+
+  .tax-toggle .form-check {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left;
+  }
+}
+
 /* Nabbar */
 .search-btn {
   color: #fff;

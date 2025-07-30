@@ -1,75 +1,77 @@
 <% layout("/layouts/boilerplate") %>
 
-<div id="filters">
-  <div class="filter mt-3">
-    <div><i class="fa-solid fa-fire"></i></div>
-    <p>Trending</p>
-  </div>
-  <div class="filter mt-3">
-    <div><i class="fa-solid fa-bed"></i></div>
-    <p>Rooms</p>
-  </div>
-  <div class="filter mt-3">
-    <div><i class="fa-solid fa-mountain-city"></i></div>
-    <p>Iconic cities</p>
-  </div>
-  <div class="filter mt-3">
-    <div><i class="fa-solid fa-mountain"></i></div>
-    <p>Mountain</p>
-  </div>
-  <div class="filter mt-3">
-    <div><i class="fa-solid fa-umbrella-beach"></i></div>
-    <p>Beachfront</p>
-  </div>
-  <div class="filter mt-3">
-    <div><i class="fa-solid fa-person-swimming"></i></div>
-    <p>Amazing pools</p>
-  </div>
-  <div class="filter mt-3">
-    <div><i class="fa-solid fa-campground"></i></div>
-    <p>Camping</p>
-  </div>
-  <div class="filter mt-3">
-    <div><i class="fa-solid fa-cow"></i></div>
-    <p>Farms</p>
-  </div>
-  <div class="filter mt-3">
-    <div><i class="fa-regular fa-snowflake"></i></div>
-    <p>Artic</p>
-  </div>
-  <div class="filter mt-3">
-    <div><i class="fa-solid fa-igloo"></i></div>
-    <p>Doms</p>
-  </div>
-  <div class="filter mt-3">
-    <div><i class="fa-solid fa-ship"></i></div>
-    <p>Boats</p>
-  </div>
-
-  <div class="tax-toggle ms-auto">
-    <div class="form-check form-switch form-check-reverse">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        role="switch"
-        id="flexSwitchCheckDefault"
-      />
-      <label class="form-check-label" for="flexSwitchCheckDefault"
-        >Display total after taxes</label
-      >
+<div class="container-fluid px-0">
+  <div id="filters" class="d-flex flex-nowrap align-items-center my-2">
+    <div class="d-flex flex-nowrap flex-grow-1 overflow-x-auto me-2 min-w-0">
+      <div class="filter flex-shrink-0 ms-1">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>Trending</p>
+      </div>
+      <div class="filter flex-shrink-0">
+        <div><i class="fa-solid fa-bed"></i></div>
+        <p>Rooms</p>
+      </div>
+      <div class="filter flex-shrink-0">
+        <div><i class="fa-solid fa-mountain-city"></i></div>
+        <p>Iconic cities</p>
+      </div>
+      <div class="filter flex-shrink-0">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p>Mountain</p>
+      </div>
+      <div class="filter flex-shrink-0">
+        <div><i class="fa-solid fa-umbrella-beach"></i></div>
+        <p>Beachfront</p>
+      </div>
+      <div class="filter flex-shrink-0">
+        <div><i class="fa-solid fa-person-swimming"></i></div>
+        <p>Amazing pools</p>
+      </div>
+      <div class="filter flex-shrink-0">
+        <div><i class="fa-solid fa-campground"></i></div>
+        <p>Camping</p>
+      </div>
+      <div class="filter flex-shrink-0">
+        <div><i class="fa-solid fa-cow"></i></div>
+        <p>Farms</p>
+      </div>
+      <div class="filter flex-shrink-0">
+        <div><i class="fa-regular fa-snowflake"></i></div>
+        <p>Artic</p>
+      </div>
+      <div class="filter flex-shrink-0">
+        <div><i class="fa-solid fa-igloo"></i></div>
+        <p>Doms</p>
+      </div>
+      <div class="filter flex-shrink-0">
+        <div><i class="fa-solid fa-ship"></i></div>
+        <p>Boats</p>
+      </div>
+    </div>
+    <div class="tax-toggle ms-auto flex-shrink-0">
+      <div class="form-check form-switch form-check-reverse">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+        />
+        <label class="form-check-label me-2" for="flexSwitchCheckDefault"
+          >Display total after taxes</label
+        >
+      </div>
     </div>
   </div>
 </div>
 
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-2 mt-3">
   <% for(let listing of allListings) { %>
   <a href="/listings/<%= listing._id %>" class="listing-link">
     <div class="card col listing-card">
       <img
         src="<%= listing.image.url %>"
-        class="card-img-top"
+        class="card-img-top idx-img-height"
         alt="listing_image"
-        style="height: 20rem"
       />
       <div class="card-img-overlay"></div>
       <div class="card-body">
