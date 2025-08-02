@@ -6,11 +6,11 @@
 </script>
 
 <div class="row mt-4">
-  <div class="col-6 offset-3 mb-2">
+  <div class="col-12 col-md-6 offset-md-3 mb-2 ps-3 pe-2">
     <h3><%= listing.title %></h3>
   </div>
 
-  <div class="card col-6 offset-3 show-card delete-border">
+  <div class="card col-12 col-md-6 offset-md-3 show-card delete-border ps-3 pe-2">
     <img
       src="<%= listing.image.url %>"
       class="card-img-top show-img"
@@ -43,7 +43,7 @@
   </div>
   <% } %>
   
-  <div class="col-6 offset-3">
+  <div class="col-12 col-md-6 offset-md-3 ps-3 pe-2">
     <% if(currUser) { %>
     <hr />
     <h4>Leave a Review</h4>
@@ -128,7 +128,7 @@
     <% } %>
   </div>
 
-  <div class="col-6 offset-3 mb-2">
+  <div class="col-12 col-md-6 offset-md-3 mb-2 ps-3 pe-2">
     <h5>Where You'll be</h5>
     <div id="map" class="rounded"></div>
   </div>
